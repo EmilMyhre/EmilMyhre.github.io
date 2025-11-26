@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiller Info Screen</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="clock"></div>
+  
+  <div class="welcome-container">
+    <div class="welcome-text">Velkommen til Informasjonsteknologi og Mediaproduksjon arealet!</div>
+  </div>
+
+  <div class="main-content">
+    <!-- Weather Widget -->
+    <div class="weather-widget">
+      <div class="weather-header">
+        <div class="weather-title">Været i Trondheim</div>
+        <div class="weather-icon" id="weather-icon">⛅</div>
+      </div>
+      
+      <div class="current-weather">
+        <div class="temperature" id="weather-temp">--°</div>
+        <div class="weather-desc" id="weather-description">Laster...</div>
+        <div class="weather-details">
+          <div class="weather-detail">
+            <div class="detail-label">Føles som</div>
+            <div class="detail-value" id="weather-feelslike">--°</div>
+          </div>
+          <div class="weather-detail">
+            <div class="detail-label">Vind</div>
+            <div class="detail-value" id="weather-wind">-- m/s</div>
+          </div>
+          <div class="weather-detail">
+            <div class="detail-label">Luftfuktighet</div>
+            <div class="detail-value" id="weather-humidity">--%</div>
+          </div>
+          <div class="weather-detail">
+            <div class="detail-label">Nedbør</div>
+            <div class="detail-value" id="weather-precipitation">-- mm</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="weather-forecast">
+        <div class="forecast-title">Neste timer</div>
+        <div class="forecast-items" id="weather-forecast">
+        </div>
+      </div>
+    </div>
+
+    <!-- Bus Section -->
+    <div class="bus-section">
+      <div id="bus-container" class="bus-container">
+        <div class="bus-header">
+          <div class="slideshow-dots">
+            <div class="slide-dot active" data-slide="0"></div>
+            <div class="slide-dot" data-slide="1"></div>
+          </div>
+          <h2 id="bus-title" class="stop-title">Henter...</h2>
+        </div>
+        <div id="bus-table" class="bus-table"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="credit-container">
+    <div class="credit-text">Utviklet av Emil Myhre og Åsmund Korsgat | 1IM2 </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
