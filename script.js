@@ -153,7 +153,8 @@ setInterval(fetchWeather, 300000);
 // BUS STOPS CONFIG
 const STOPS = [
   { id: "NSR:StopPlace:44029", name: "Tillerterminalen" },
-  { id: "NSR:StopPlace:41587", name: "Tiller VGS" }
+  { id: "NSR:StopPlace:41587", name: "Tiller VGS" },
+  { id: "NSR:StopPlace:44031", name: "City Syd E6" }
 ];
 
 let currentStopIndex = 0;
