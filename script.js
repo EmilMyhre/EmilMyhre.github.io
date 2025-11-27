@@ -2,7 +2,7 @@
 function updateClock() {
   const now = new Date();
   document.getElementById("clock").textContent =
-    now.toLocaleTimeString("no-NO", { hour12: false });
+    timeZone: 'Europe/Oslo', { hour12: false };
 }
 setInterval(updateClock, 1000);
 updateClock();
@@ -286,5 +286,6 @@ function init() {
   updateSlideshow();
   setInterval(updateSlideshow, 15000);
 }
+
 
 document.addEventListener('DOMContentLoaded', init);
