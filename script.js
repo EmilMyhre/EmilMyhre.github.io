@@ -165,7 +165,7 @@ const STOPS = [
 
 let currentStopIndex = 0;
 
-// BUS FETCH FUNCTION
+// BUS FETCH FUNCTION - TIMEZONE FIX
 async function fetchBus(stopId) {
   try {
     const res = await fetch(
@@ -200,21 +200,25 @@ async function fetchBus(stopId) {
     }
     
     const calls = json.data.stopPlace.estimatedCalls;
+    
+    // USE TIMEZONE INSTEAD OF DEVICE
     const now = new Date();
+    const trondheimTime = new Date(now.toLocaleString("en-US", { timeZone: "Europe/Oslo" }));
 
     const rows = calls.slice(0, 6).map(call => {
       const line = call.serviceJourney.line.publicCode;
       const dest = call.destinationDisplay.frontText;
 
       const dep = new Date(call.expectedDepartureTime);
-      const diffMin = Math.max(0, Math.round((dep - now) / 60000));
+      
+      const diffMin = Math.max(0, Math.round((dep - trondheimTime) / 60000));
 
       const exact = dep.toLocaleTimeString("no-NO", {
         hour: "2-digit",
-        minute: "2-digit"
+        minute: "2-digit",
+        timeZone: "Europe/Oslo"
       });
 
-      // urgent
       let urgencyClass = "";
       if (diffMin <= 5) {
         urgencyClass = "soon";
