@@ -315,8 +315,8 @@ body {
 }
 
 .bus-time.medium {
-  background: rgb(252, 202, 0);
-  color: #2f2600;
+  background: rgb(226, 173, 0);
+  color: #ffe600;
 }
 
 .bus-time.later {
