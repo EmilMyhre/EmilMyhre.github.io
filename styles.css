@@ -12,6 +12,48 @@ body {
   cursor: none;
 }
 
+.announcement-bar {
+  background: rgba(255, 126, 167, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.announcement-content {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: scrollAnnouncement 30s linear infinite;
+}
+
+.announcement-icon {
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+.announcement-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes scrollAnnouncement {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.announcement-bar:hover .announcement-content {
+  animation-play-state: paused;
+}
+
 .main-content {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
