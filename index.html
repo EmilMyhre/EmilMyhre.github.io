@@ -6,21 +6,20 @@
   <title>Tiller Info Screen</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="backgroundcycle">
-  
+<body>
+
   <div id="clock"></div>
   
   <div class="welcome-container">
-    <h3>Velkommen til Informasjonsteknologi og Mediaproduksjon arealet!</h3>
+    <div class="welcome-text">Velkommen til Informasjonsteknologi og Mediaproduksjon arealet!</div>
   </div>
 
-  <!-- Weather Content -->
   <div class="main-content">
+    <!-- Weather Widget -->
     <div class="weather-widget">
       <div class="weather-header">
-        <h2>Været på Tiller</h2>
-        <div id="weather-icon">
-</div>
+        <div class="weather-title">Været på Tiller</div>
+        <div class="weather-icon" id="weather-icon">⛅</div>
       </div>
       
       <div class="current-weather">
@@ -28,32 +27,33 @@
         <div class="weather-desc" id="weather-description">Laster...</div>
         <div class="weather-details">
           <div class="weather-detail">
-            <h2 class="detail-label">Føles som</h2>
-            <h2 class="detail-label" id="weather-feelslike">--°</h2>
+            <div class="detail-label">Føles som</div>
+            <div class="detail-value" id="weather-feelslike">--°</div>
           </div>
           <div class="weather-detail">
-            <h2 class="detail-label">Vind</h2>
-            <h2 class="detail-label" id="weather-wind">-- m/s</h2>
+            <div class="detail-label">Vind</div>
+            <div class="detail-value" id="weather-wind">-- m/s</div>
           </div>
           <div class="weather-detail">
-            <h2 class="detail-label">Luftfuktighet</h2>
-            <h2 class="detail-label" id="weather-humidity">--%</h2>
+            <div class="detail-label">Luftfuktighet</div>
+            <div class="detail-value" id="weather-humidity">--%</div>
           </div>
           <div class="weather-detail">
-            <h2 class="detail-label">Nedbør</h2>
-            <h2 class="detail-label" id="weather-precipitation">-- mm</h2>
+            <div class="detail-label">Nedbør</div>
+            <div class="detail-value" id="weather-precipitation">-- mm</div>
           </div>
         </div>
       </div>
 
       <div class="weather-forecast">
-        <h2 class="detail-label" >Neste timer</h2>
+        <div class="forecast-title">Neste timer</div>
         <div class="forecast-items" id="weather-forecast">
         </div>
       </div>
     </div>
 
     <!-- Bus Section -->
+    <div class="bus-section">
       <div id="bus-container" class="bus-container">
         <div class="bus-header">
           <div class="slideshow-dots">
@@ -65,10 +65,11 @@
         </div>
         <div id="bus-table" class="bus-table"></div>
       </div>
+    </div>
   </div>
 
   <div class="credit-container">
-    <h2 class="credit-text">Utviklet av Emil Myhre, Åsmund Korsgat og Eivind Brubak | 1IM2 </h2>
+    <div class="credit-text">☕ Utviklet av Emil Myhre, Åsmund Korsgat og Eivind Brubak | 1IM2 </div>
   </div>
 
   <script src="script.js"></script>
