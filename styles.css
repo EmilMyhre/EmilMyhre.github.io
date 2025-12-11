@@ -12,6 +12,56 @@ body {
   cursor: none;
 }
 
+.backgroundcycle {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: 130%;
+  background-position: center;
+  animation: backgroundcycle 92.7s infinite, pan-background 700s infinite;
+}
+
+
+@keyframes pan-background {
+    0% {
+        background-position: 0% 0%; 
+    }
+    25% {
+        background-position: 100% 20%; 
+    }
+    50% {
+        background-position: 0% 10%; 
+    }
+    75% {
+        background-position: 100% 2%;
+    }
+    100% {
+        background-position: 0% 0%; 
+    }
+}
+
+@keyframes backgroundcycle {
+  0% {
+    background-image: url('background1.jpg');
+  }
+  20% {
+    background-image: url('background2.jpg');
+  }
+  40% {
+    background-image: url('background3.jpg');
+  }
+  60% {
+    background-image: url('background4.jpg');
+  }
+  80% {
+    background-image: url('background5.jpg');
+  }
+  100% {
+    background-image: url('background1.jpg');
+  } 
+}
+
 .main-content {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
