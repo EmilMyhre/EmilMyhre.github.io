@@ -62,11 +62,11 @@ async function fetchDetailedWeather() {
 // ===============================
 
 const BACKGROUND_IMAGES = [
-  'background1.jpg',
-  'background2.jpg',
-  'background3.jpg',
-  'background4.jpg',
-  'background5.jpg'
+  'WinterImg/background1.jpg',
+  'WinterImg/background2.jpg',
+  'WinterImg/background3.jpg',
+  'WinterImg/background4.jpg',
+  'WinterImg/background5.jpg'
 ];
 
 let bgIndex = 0;
@@ -98,6 +98,13 @@ function switchBackground() {
 
   bgLayers[next].style.backgroundImage =
     `url(${BACKGROUND_IMAGES[bgIndex]})`;
+
+  bgLayers[next].style.animation = 'none';
+  void bgLayers.offsetWidth;
+
+  const direction = Math.random() < 0.5 ? 'left' : 'right';
+  
+  bgLayers[next].style.animation = `${direction} 20s ease-in-out forwards`;
 
   bgLayers[next].style.opacity = 1;
   bgLayers[activeBg].style.opacity = 0;
@@ -168,10 +175,10 @@ function updateWeatherForecast(timeseries) {
     const icon = getWeatherIcon(symbolCode);
     
     return `
-      <div class="forecast-item">
-        <div class="forecast-time">${time.getHours()}:00</div>
+      <div class="box" class="weather-detail">
+        <div class="detail-label">${time.getHours()}:00</div>
         <div class="weather-icon">${icon}</div>
-        <div class="forecast-temp">${temp}°</div>
+        <div class="detail-label">${temp}°</div>
       </div>
     `;
   }).join('');
