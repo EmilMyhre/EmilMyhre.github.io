@@ -22,6 +22,8 @@ const icons = {
     'sleet': '🌧️❄️'
 };
 
+
+
 // Weather Descriptions
 const descriptions = {
     'clearsky': 'Klart vær',
@@ -101,7 +103,6 @@ async function fetchDetailedWeather() {
 
 // Weather Forecast for next hours
 function updateWeatherForecast(timeseries) {
-    const forecastContainer = el.weatherForecast;
     const forecastItems = timeseries.slice(1, 4);
 
     const forecastHTML = forecastItems.map((hour) => {
@@ -119,5 +120,5 @@ function updateWeatherForecast(timeseries) {
     `;
     }).join('');
 
-    setHTML(el.forecastContainer, forecastHTML);
+    setHTML(el.weatherForecast, forecastHTML);
 }

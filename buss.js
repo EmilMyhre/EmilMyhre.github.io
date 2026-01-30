@@ -18,7 +18,7 @@ async function fetchBus(stopId) {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    "ET-Client-Name": "tiller-screen"
+                    "ET-Client-Name": "tiller-screen" 
                 },
                 body: JSON.stringify({
                     query: `
@@ -91,15 +91,15 @@ async function fetchBus(stopId) {
     }
 }
 
+
 //change slideshow every 6 seconds
 async function updateSlideshow() {
-    const stopA = STOPS[currentStopIndex];
+    const stop = STOPS[currentStopIndex];
 
     el.slideDots.forEach((dot, index) => {
         dot.classList.toggle('active', index === currentStopIndex);
     });
-    const container = el.busContainer;
-    const html = await fetchBus(stopA.id);
+    const html = await fetchBus(stop.id);
 
     el.busTitle.textContent = stop.name;
     setHTML(el.busTable, html);

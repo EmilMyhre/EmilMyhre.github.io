@@ -12,7 +12,6 @@ const el = {
 
     busTitle: document.getElementById("bus-title"),
     busTable: document.getElementById("bus-table"),
-    busContainer: document.getElementById("bus-container"),
 
     slideDots: document.querySelectorAll('.slide-dot')
 };
