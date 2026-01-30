@@ -1,13 +1,4 @@
-const el = {
-    busTitle: document.getElementById("bus-title"),
-    busTable: document.getElementById("bus-table"),
-    busContainer: document.getElementById("bus-container"),
-    
-    slideDots: document.querySelectorAll('.slide-dot')
-};
-
 //Bus Widget
-//#########################################
 
 // Buss stops. for more go to:https://entur.no/kart
 const STOPS = [
@@ -130,5 +121,3 @@ function init() {
     updateSlideshow();
     setInterval(updateSlideshow, 6000);
 }
-
-init();
