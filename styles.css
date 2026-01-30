@@ -25,7 +25,18 @@ body {
   border-radius: 18px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.233);
   border: 0.07vh solid rgb(255, 255, 255);
+}
+
+.bus-container {
+  padding: 20px 25px;
+  height: fit-content;
   transition: all 0.5s ease;
+  padding: 10px 20px;
+  backdrop-filter: blur(5px) saturate(220%);
+  background-color: #0000008a;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.233);
+  border: 0.07vh solid rgb(255, 255, 255);
 }
 
 @keyframes left {
@@ -176,12 +187,6 @@ h2 {
   height: fit-content;
   display: flex;
   flex-direction: column;
-}
-
-.bus-container {
-  padding: 20px 25px;
-  transition: all 0.5s ease;
-  height: fit-content;
 }
 
 .bus-header {
@@ -339,6 +344,44 @@ h2 {
 
 .bus-time {
   font-size: 18px;
+}
+
+.announcement-bar {
+  padding: 8px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.announcement-content {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: scrollAnnouncement 30s linear infinite;
+}
+
+.announcement-icon {
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+.announcement-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes scrollAnnouncement {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.announcement-bar:hover .announcement-content {
+  animation-play-state: paused;
 }
 
 .credit-container {
