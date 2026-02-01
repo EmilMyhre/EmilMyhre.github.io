@@ -25,7 +25,6 @@ body {
   border-radius: 18px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.233);
   border: 0.07vh solid rgb(255, 255, 255);
-  transition: all 0.5s ease;
 }
 
 @keyframes left {
@@ -81,8 +80,8 @@ body {
   margin: 0 0 10px 0;
 }
 
-h3 {
-  font-size: 24px;
+h3, .detail-label, .weather-icon {
+  font-size: 2vh;
   font-weight: 600;
   color: white;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
@@ -147,12 +146,7 @@ h2 {
   text-align: center;
 }
 
-.detail-label {
-  font-size: 25px;
-  opacity: 0.9;
-  margin-bottom: 4px;
-  color: rgba(255, 255, 255, 0.9);
-}
+
 
 .weather-forecast {
   margin-top: 20px;
@@ -178,12 +172,6 @@ h2 {
   flex-direction: column;
 }
 
-.bus-container {
-  padding: 20px 25px;
-  transition: all 0.5s ease;
-  height: fit-content;
-}
-
 .bus-header {
   display: flex;
   flex-direction: column;
@@ -206,7 +194,6 @@ h2 {
   background: rgba(255, 255, 255, 0.3);
   border: 2px solid rgba(255, 255, 255, 0.4);
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .slide-dot.active {
@@ -297,7 +284,6 @@ h2 {
   background: rgba(255, 80, 80, 0.4);
   box-shadow: 0 4px 12px rgba(255, 80, 80, 0.45);
   color: #ffe6e6;
-  animation: pulse 1s ease-in-out infinite;
 }
 
 .bus-time.medium {
@@ -339,6 +325,44 @@ h2 {
 
 .bus-time {
   font-size: 18px;
+}
+
+.announcement-bar {
+  padding: 8px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.announcement-content {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: scrollAnnouncement 30s linear infinite;
+}
+
+.announcement-icon {
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+.announcement-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes scrollAnnouncement {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.announcement-bar:hover .announcement-content {
+  animation-play-state: paused;
 }
 
 .credit-container {
