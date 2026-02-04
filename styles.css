@@ -27,26 +27,6 @@ body {
   border: 0.07vh solid rgb(255, 255, 255);
 }
 
-@keyframes left {
-  from {
-    background-position: 50% 50%;
-  }
-
-  to {
-    background-position: 40% 50%;
-  }
-}
-
-@keyframes right {
-  from {
-    background-position: 50% 50%;
-  }
-
-  to {
-    background-position: 60% 50%;
-  }
-}
-
 .bg-1 {
   opacity: 1;
 }
@@ -337,7 +317,7 @@ h2 {
   display: flex;
   align-items: center;
   white-space: nowrap;
-  animation: scrollAnnouncement 30s linear infinite;
+  animation: scrollAnnouncement 60s linear infinite;
 }
 
 .announcement-icon {
