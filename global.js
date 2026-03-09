@@ -1,6 +1,8 @@
 const el = {
     clock: document.getElementById("clock"),
 
+    background: document.querySelectorAll(".background"),
+
     weatherTemp: document.getElementById("weather-temp"),
     weatherFeels: document.getElementById("weather-feelslike"),
     weatherWind: document.getElementById("weather-wind"),
