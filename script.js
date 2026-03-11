@@ -1,5 +1,6 @@
 
 // Update clock every second
+UpdateClock();
 setInterval(UpdateClock, 10000);
 
 //Update background

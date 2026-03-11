@@ -29,17 +29,17 @@ body {
 
 .box {
   border-radius: 10px;
-  border: 0.07vh solid rgb(255, 255, 255);
+  border: 0.2vh solid rgb(255, 255, 255,0.3);
   text-align: center;
 }
 
 .box2 {
   padding: 10px 20px;
-  backdrop-filter: blur(5px) saturate(220%);
+  backdrop-filter: blur(3px) saturate(220%);
   background-color: #0000008a;
   border-radius: 30px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.233);
-  border: 0.07vh solid rgb(255, 255, 255);
+  box-shadow: 0 32px 32px rgba(0, 0,0,0.5);
+  border: 0.2vh solid rgb(255, 255, 255,0.3);
 }
 
 .bg-1 {
@@ -96,6 +96,7 @@ h3, .detail-label, .weather-icon {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: 43%;
   margin-bottom: 15px;
 }
 
@@ -103,6 +104,7 @@ h2 {
   font-size: 24px;
   font-weight: 700;
   color: white;
+  text-align: center;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
@@ -350,8 +352,8 @@ h2 {
   padding: 10px 20px;
   backdrop-filter: blur(5px) saturate(220%);
   background-color: #0000008a;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.233);
-  border-bottom: 0.07vh solid rgb(255, 255, 255);
+  box-shadow: 0 32px 32px rgba(0, 0,0,0.5);
+  border-bottom: 0.2vh solid rgb(255, 255, 255,0.3);
 }
 
 .announcement-content {
@@ -380,10 +382,10 @@ h2 {
   backdrop-filter: blur(5px) saturate(220%);
   background-color: #0000008a;
   border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.233);
+  box-shadow: 0 32px 32px rgba(0, 0,0,0.5);
   border: 1px solid rgba(255, 255, 255, 0.164);
   transition: all 0.5s ease;
-  border: 0.07vh solid rgb(255, 255, 255);
+  border: 0.2vh solid rgb(255, 255, 255,0.3);
 }
 
 .credit-text {
