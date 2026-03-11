@@ -1,9 +1,9 @@
 
 // Update clock every second
-setInterval(UpdateClock, 1000);
+setInterval(UpdateClock, 10000);
 
 //Update background
-setInterval(UpdateBackground, 10000);
+setInterval(UpdateBackground, 12300);
 
 //set weather fetch interval to 10 minutes
 setInterval(fetchDetailedWeather, 60000);
